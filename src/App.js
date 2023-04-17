@@ -16,6 +16,7 @@ function App() {
   }
   return (
     <div className="App">
+
        <div class="character-container1">
             <div>
            <img src={imagenmifoto} alt="Yolotzin" className="img-home1"/>
