@@ -2,6 +2,7 @@
 import './index.css';
 import './App.css';
 import imagenRickMorty from "./img/rick-morty.png";
+import imagenmifoto from "./img/mifoto.png";
 import { useState } from 'react';
 import Characters from './components/Characters';
 
@@ -30,7 +31,13 @@ function App() {
         }
       </header>
     </div>
+    
   );
+
+  <div>
+ <img src={imagenmifoto} alt="mifoto" className="img-home"/>
+  </div>
+
 }
 
 export default App;
