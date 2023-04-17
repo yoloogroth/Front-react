@@ -2,7 +2,7 @@
 import './index.css';
 import './App.css';
 import imagenRickMorty from "./img/rick-morty.png";
-import imagenmifoto from "./img/mifoto.jpg";
+import imagenmifoto from "./img/mifoto.jpeg";
 import { useState } from 'react';
 import Characters from './components/Characters';
 
