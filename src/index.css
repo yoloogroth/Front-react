@@ -10,8 +10,8 @@ body {
 .title {
   color: #f02c09;
   font-size: 40px;
-  font-family: fantasy, Courier 
-  ;
+  -webkit-text-stroke: 1px black;
+  font-family: fantasy, Courier;
   margin-bottom: 0;
 }
 
