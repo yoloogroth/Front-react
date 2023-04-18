@@ -1,11 +1,12 @@
-name: master CI, CD workflow 
+name: release CI, CD workflow 
+
 on: 
   push:
-    branches: [ "master"]
+    branches: [ "release"]
   pull_request:
-    branches: [ "master"]
+    branches: [ "release"]
 jobs:
-  master_ci_cd:
+  release_ci_cd:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -42,7 +43,7 @@ jobs:
           docker cp build/.  serving_base:/usr/local/apache2/htdocs
           
       - name: Build the custom Docker image
-        run: docker commit --change "ENV MODEL_NAME ${{secrets.MODEL_NAME}}" serving_base ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME_TEST}}:${{github.sha}}
+        run: docker commit --change "ENV MODEL_NAME ${{secrets.MODEL_NAME_TEST}}" serving_base ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME_TEST}}:${{github.sha}}
 
       - name: show docker images
         run: docker images
@@ -88,3 +89,5 @@ jobs:
           
           
 #To-do list: Update data of accounts if it's neccesary
+          
+          
